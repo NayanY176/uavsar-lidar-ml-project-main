@@ -3,7 +3,7 @@ from typing import Dict
 from IPython.display import display
 
 
-from utils.model_utils import evaluate_model
+from utils.model_utils import compute_metrics
 from utils.pytorch_model import RegressionNN
 from utils.pytorch_training import train, predict
 from utils.pytorch_dataset import create_dataset_for_dnn
@@ -241,13 +241,13 @@ class ModelFitting:
 
         if self.model_name == 'extra_trees':
 
-            train_eval=evaluate_model(
+            train_eval=compute_metrics(
                 y_true=self.split['y_temp'],
                 y_pred=self.y_pred_train,
                 model_name=self.model_name + '_train'
             )
 
-            test_eval=evaluate_model(
+            test_eval=compute_metrics(
                 y_true=self.split['y_test'],
                 y_pred=self.y_pred_test,
                 model_name=self.model_name + '_test'
@@ -260,13 +260,13 @@ class ModelFitting:
 
         elif self.model_name == 'xgboost':
 
-            train_eval=evaluate_model(
+            train_eval=compute_metrics(
                 y_true=self.split['y_temp'],
                 y_pred=self.y_pred_train,
                 model_name=self.model_name + '_train'
             )
 
-            test_eval=evaluate_model(
+            test_eval=compute_metrics(
                 y_true=self.split['y_test'],
                 y_pred=self.y_pred_test,
                 model_name=self.model_name + '_test'
@@ -279,13 +279,13 @@ class ModelFitting:
 
         elif self.model_name == 'pytorch_nn':
 
-            train_eval=evaluate_model(
+            train_eval=compute_metrics(
                 y_true=self.predictions_train['labels'],
                 y_pred=self.predictions_train['predictions'],
                 model_name=self.model_name + '_train'
             )
 
-            test_eval=evaluate_model(
+            test_eval=compute_metrics(
                 y_true=self.predictions_test['labels'],
                 y_pred=self.predictions_test['predictions'],
                 model_name=self.model_name + '_test'
