@@ -3,6 +3,7 @@ import pandas as pd
 from typing import Dict, Union
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
+from math import sqrt
 
 # Set the seed for reproducibility
 seed = 10
@@ -73,8 +74,8 @@ def compute_metrics(
     --------
     A pandas DataFrame containing the RMSE, MBE and R2 metrics for the model.
     """
-
-    RMSE = mean_squared_error(y_true=y_true, y_pred=y_pred, squared=False)
+    RMSE = sqrt(mean_squared_error(y_true=y_true, y_pred=y_pred))
+    # RMSE = mean_squared_error(y_true=y_true, y_pred=y_pred, squared=False)
     MBE  = np.mean(y_pred- y_true)
     RSQ  = r2_score(y_true=y_true, y_pred=y_pred)
     
