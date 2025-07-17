@@ -49,7 +49,7 @@ def split_data(df: pd.DataFrame) -> Dict[str, pd.DataFrame]:
 
 # let's create a function that will help us evaluate the results of the model
 
-def evaluate_model(
+def compute_metrics(
     y_true: Union[pd.Series, list], 
     y_pred: Union[pd.Series, list], 
     model_name: str
