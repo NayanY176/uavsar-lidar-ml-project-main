@@ -808,7 +808,7 @@ initial_params = {
         'n_jobs': -1
     },
     'random_forest': { # New: Default parameters for Random Forest Regressor
-        'n_estimators': 5,
+        'n_estimators': 1,
         'max_depth': None,
         'criterion': 'squared_error',
         'n_jobs': -1,
