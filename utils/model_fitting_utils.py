@@ -43,16 +43,16 @@ initial_params = {
         'random_state': 42
     },
     'xgboost': {
-        "sampling_method": "gradient_based",
+        "sampling_method": "gradient_based", # <-- This is now supported
         'objective': 'reg:squarederror',
         "min_child_weight": 30,
         'learning_rate': 0.05,
-        'tree_method': 'hist',
+        'tree_method': 'gpu_hist',          # <-- Changed to use the GPU
         'booster': 'gbtree',
-        'device': xgb_device,
-        'max_depth': 0, # Max_depth 0 usually means no limit, confirm if this is intended for XGBoost
+        'device': 'cuda',                   # <-- Explicitly set for GPU
+        'max_depth': 0,
         "subsample": 1,
-        "max_bin":5096,
+        "max_bin": 5096,
         "trees": 1000,
         "seed": 42
     },
