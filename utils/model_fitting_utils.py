@@ -145,6 +145,8 @@ class ModelFitting:
             boosting_params = self.model_params.copy()
             boosting_params.pop("trees") # 'trees' is for num_boost_round, not a direct param to xgb.train
 
+            print("Parameters being used for xgb.train:", boosting_params)
+
             self.model = xgb.train(
                 params=boosting_params,
                 dtrain=dtrain,
