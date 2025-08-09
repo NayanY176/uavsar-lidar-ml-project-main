@@ -36,7 +36,7 @@ device = (
 
 initial_params = {
     'extra_trees': {
-        'n_estimators': 150,
+        'n_estimators': 100,
         'max_depth': None,
         'criterion': 'squared_error',
         'n_jobs': -1,
