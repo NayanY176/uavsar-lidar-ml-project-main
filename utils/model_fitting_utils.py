@@ -79,7 +79,7 @@ initial_params = {
     'lightgbm': { # New: Default parameters for LightGBM Regressor
         'objective': 'regression_l1', # 'regression_l1' for MAE, 'regression_l2' for MSE
         'metric': 'rmse',
-        'n_estimators': 5,
+        'n_estimators': 150,
         'learning_rate': 0.05,
         'num_leaves': 31, # Default is 31, can be tuned
         'max_depth': -1, # -1 means no limit
