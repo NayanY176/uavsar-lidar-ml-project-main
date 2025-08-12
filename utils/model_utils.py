@@ -75,7 +75,7 @@ def compute_metrics(
     A pandas DataFrame containing the RMSE, MBE and R2 metrics for the model.
     """
     # RMSE = sqrt(mean_squared_error(y_true=y_true, y_pred=y_pred))
-    RMSE = mean_squared_error(y_true=y_true, y_pred=y_pred)
+    RMSE = sqrt(mean_squared_error(y_true=y_true, y_pred=y_pred))
     MBE  = np.mean(y_pred- y_true)
     RSQ  = r2_score(y_true=y_true, y_pred=y_pred)
     
