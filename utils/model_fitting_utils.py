@@ -97,9 +97,9 @@ initial_params = {
         'depth': 8, # Default is 6, can be tuned
         'loss_function': 'RMSE',
         'eval_metric': 'RMSE',
-        'l2_leaf_reg': 3
+        'l2_leaf_reg': 3,
         'random_state': 42,
-        'early_stopping_rounds': 50
+        'early_stopping_rounds': 50,
         'verbose': 100, # Suppress verbose output during training
         'thread_count': -1 # Use all available CPU cores
     }
