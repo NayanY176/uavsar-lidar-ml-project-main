@@ -92,12 +92,15 @@ initial_params = {
         'verbose': -1
     },
     'catboost': { # New: Default parameters for CatBoost Regressor
-        'iterations': 150, # CatBoost uses 'iterations' instead of 'n_estimators'
-        'learning_rate': 0.05,
-        'depth': 6, # Default is 6, can be tuned
+        'iterations': 3000, # CatBoost uses 'iterations' instead of 'n_estimators'
+        'learning_rate': 0.03,
+        'depth': 8, # Default is 6, can be tuned
         'loss_function': 'RMSE',
+        'eval_metric': 'RMSE',
+        'l2_leaf_reg': 3
         'random_state': 42,
-        'verbose': 0, # Suppress verbose output during training
+        'early_stopping_rounds': 50
+        'verbose': 100, # Suppress verbose output during training
         'thread_count': -1 # Use all available CPU cores
     }
 }
