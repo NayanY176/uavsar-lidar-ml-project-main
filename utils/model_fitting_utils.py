@@ -80,8 +80,8 @@ initial_params = {
     'lightgbm': {
         'objective': 'regression_l1',
         'metric': 'rmse',
-        'n_estimators': 150,
-        'learning_rate': 0.05,
+        'n_estimators': 1500,
+        'learning_rate': 0.03,
         'num_leaves': 31,
         'max_depth': -1,
         'min_child_samples': 20,
