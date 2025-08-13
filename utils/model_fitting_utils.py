@@ -92,7 +92,7 @@ initial_params = {
         'verbose': -1
     },
     'catboost': { # New: Default parameters for CatBoost Regressor
-        'iterations': 3000, # CatBoost uses 'iterations' instead of 'n_estimators'
+        'iterations': 10000, # CatBoost uses 'iterations' instead of 'n_estimators'
         'learning_rate': 0.03,
         'depth': 8, # Default is 6, can be tuned
         'loss_function': 'RMSE',
