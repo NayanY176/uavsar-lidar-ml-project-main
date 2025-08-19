@@ -18,7 +18,7 @@ def train(model, train_loader, val_loader, epochs, criterion, optimizer, device,
     history = {'train_loss': [], 'val_loss': [], 'train_metric': [], 'val_metric': []}
 
     # 1. Instantiate the ReduceLROnPlateau scheduler
-    scheduler = ReduceLROnPlateau(optimizer, 'min', patience=3, factor=0.1, verbose=True)
+    scheduler = ReduceLROnPlateau(optimizer, 'min', patience=3, factor=0.1)
 
     for epoch in range(epochs):
         model.train()
