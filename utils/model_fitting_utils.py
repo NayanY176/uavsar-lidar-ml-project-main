@@ -58,12 +58,11 @@ initial_params = {
         "seed": 42
     },
     'pytorch_nn': {
-        'hidden_size1': 2048,
-        'hidden_size2': 1500,
-        'hidden_size3': 1000,
+        'hidden_size1': 512,
+        'hidden_size2': 256,
         'num_epochs': 15,
-        'batch_size': 128,
-        'learning_rate': 0.0001,
+        'batch_size': 256,
+        'learning_rate': 0.001,
         'verbose': True
     },
     'linear_regression': {
