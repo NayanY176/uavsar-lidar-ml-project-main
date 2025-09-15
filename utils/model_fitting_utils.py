@@ -176,13 +176,11 @@ class ModelFitting:
             input_size = self.loader['train_dataloader'].dataset.features.shape[1]
             hidden_size1 = self.model_params['hidden_size1']
             hidden_size2 = self.model_params['hidden_size2']
-            hidden_size3 = self.model_params['hidden_size3']
 
             self.model = RegressionNN(
                 input_size=input_size,
                 hidden_size1=hidden_size1,
                 hidden_size2=hidden_size2,
-                hidden_size3=hidden_size3
             )
 
             optimizer = optim.Adam(self.model.parameters(), lr= self.model_params['learning_rate'])
